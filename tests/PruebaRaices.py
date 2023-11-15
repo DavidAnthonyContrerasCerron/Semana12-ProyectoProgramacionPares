@@ -10,16 +10,14 @@ class PruebaRaices(unittest.TestCase):
         self.ecuacionSegundoGrado = None
 
     def test_TresCoeficientesEnteros_retornaRaicesReales(self):
-        self.ecuacionSegundoGrado.coeficientes = []
-
         # Arrange
         self.ecuacionSegundoGrado.coeficientes = [3, -5, 1]
         raiz1 = 1.43
         raiz2 = 0.23
 
         # Do
-        raiz1Actual, raiz2Actual = self.ecuacionSegundoGrado.calcular_raices()
+        raiz1Calculada, raiz2Calculada = self.ecuacionSegundoGrado.calcular_raices()
 
         # Assert
-        self.assertAlmostEqual(raiz1Actual, raiz1, places=2)
-        self.assertAlmostEqual(raiz2Actual, raiz2, places=2)
+        self.assertAlmostEqual(raiz1Calculada, raiz1, places=2)
+        self.assertAlmostEqual(raiz2Calculada, raiz2, places=2)
