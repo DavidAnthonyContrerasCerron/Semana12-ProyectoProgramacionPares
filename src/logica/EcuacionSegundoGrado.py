@@ -1,6 +1,5 @@
 import cmath
 
-
 class ExceptionDatos(Exception):
     pass
 
@@ -40,5 +39,4 @@ class EcuacionSegundoGrado:
             raiz1 = (-b + cmath.sqrt(discriminante)) / (2 * a)
             raiz2 = (-b - cmath.sqrt(discriminante)) / (2 * a)
             return complex(round(raiz1.real, 2), round(raiz1.imag, 2)), complex(round(raiz2.real, 2), round(raiz2.imag, 2))
-
 
