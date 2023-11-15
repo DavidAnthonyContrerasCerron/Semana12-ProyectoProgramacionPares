@@ -23,3 +23,8 @@ class PruebaRaices(unittest.TestCase):
         # Assert
         self.assertAlmostEqual(raiz1Actual, raiz1, places=2)
         self.assertAlmostEqual(raiz2Actual, raiz2, places=2)
+        raiz1Calculada, raiz2Calculada = self.ecuacionSegundoGrado.calcular_raices()
+
+        # Assert
+        self.assertAlmostEqual(raiz1Calculada, raiz1, places=2)
+        self.assertAlmostEqual(raiz2Calculada, raiz2, places=2)
