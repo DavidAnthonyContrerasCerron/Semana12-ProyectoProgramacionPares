@@ -39,3 +39,15 @@ class PruebaRaices(unittest.TestCase):
         # Assert
         self.assertEqual(raiz1Calculada, raiz1)
         self.assertEqual(raiz2Calculada, raiz2)
+    def test_RaicesCero_retornaRaicesReales(self):
+        # Arrange
+        self.ecuacionSegundoGrado.coeficientes = [1, 4, 0]
+        raiz1 = 0.00
+        raiz2 = -4.00
+
+        # Do
+        raiz1Calculada, raiz2Calculada = self.ecuacionSegundoGrado.calcular_raices()
+
+        # Assert
+        self.assertEqual(raiz1Calculada, raiz1)
+        self.assertEqual(raiz2Calculada, raiz2)
